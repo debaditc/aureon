@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aureon"
+version = "0.2.0"
+description = "Aureon (Adaptive Unified Retrieval Engine): dense+sparse fusion with a query router and explain-mode output."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["retrieval", "hybrid-search", "rag", "bm25", "rrf", "reranking"]
+dependencies = [
+    "numpy>=1.21",
+    "scikit-learn>=1.0",
+    "rank-bm25>=0.2.2",
+]
+
+[project.optional-dependencies]
+# Real-encoder path for the BEIR test. Heavy; not required for core.
+encoders = ["sentence-transformers>=2.2"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+aureon-bench = "aureon.benchmark:main"
+
+[tool.setuptools.packages.find]
+include = ["aureon*"]

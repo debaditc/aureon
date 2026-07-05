@@ -1,0 +1,75 @@
+<svg width="860" height="240" viewBox="0 0 860 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aureon — Adaptive Unified Retrieval Engine">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="860" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#141F33"/>
+    </linearGradient>
+    <linearGradient id="word" x1="300" y1="80" x2="820" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="fuse" x1="120" y1="120" x2="300" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- panel -->
+  <rect x="0" y="0" width="860" height="240" rx="24" fill="url(#bg)"/>
+  <rect x="1.5" y="1.5" width="857" height="237" rx="22.5" fill="none" stroke="#22304A" stroke-width="1.5"/>
+
+  <!-- subtle dot grid -->
+  <g fill="#1C2A42">
+    <circle cx="60" cy="40" r="1.6"/><circle cx="110" cy="40" r="1.6"/><circle cx="160" cy="40" r="1.6"/>
+    <circle cx="60" cy="200" r="1.6"/><circle cx="110" cy="200" r="1.6"/><circle cx="160" cy="200" r="1.6"/>
+  </g>
+
+  <!-- ===== fusion emblem: dense + sparse -> router -> fused ===== -->
+  <g stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M118 82 C 170 82, 170 120, 214 120" stroke="#38BDF8" opacity="0.9"/>
+    <path d="M118 158 C 170 158, 170 120, 214 120" stroke="#FBBF24" opacity="0.9"/>
+    <path d="M246 120 H 300" stroke="url(#fuse)"/>
+  </g>
+
+  <!-- dense node (semantic) -->
+  <circle cx="112" cy="82" r="16" fill="#0B1220" stroke="#38BDF8" stroke-width="3.5"/>
+  <circle cx="112" cy="82" r="6" fill="#38BDF8"/>
+  <!-- sparse node (lexical) -->
+  <rect x="97" y="143" width="30" height="30" rx="6" fill="#0B1220" stroke="#FBBF24" stroke-width="3.5"/>
+  <rect x="105" y="151" width="14" height="14" rx="3" fill="#FBBF24"/>
+
+  <!-- router (diamond) -->
+  <g filter="url(#glow)">
+    <rect x="211" y="102" width="36" height="36" rx="7" transform="rotate(45 229 120)" fill="#0B1220" stroke="#A78BFA" stroke-width="3.5"/>
+  </g>
+  <circle cx="229" cy="120" r="6" fill="#A78BFA"/>
+
+  <!-- fused result bars -->
+  <g fill="url(#fuse)">
+    <rect x="304" y="104" width="34" height="7" rx="3.5"/>
+    <rect x="304" y="116" width="26" height="7" rx="3.5" opacity="0.75"/>
+    <rect x="304" y="128" width="18" height="7" rx="3.5" opacity="0.5"/>
+  </g>
+
+  <!-- tiny labels -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" letter-spacing="1.5" fill="#64748B">
+    <text x="112" y="55" text-anchor="middle">DENSE</text>
+    <text x="112" y="192" text-anchor="middle">SPARSE</text>
+    <text x="229" y="168" text-anchor="middle">ROUTER</text>
+  </g>
+
+  <!-- ===== wordmark ===== -->
+  <text x="392" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#A78BFA">✦</text>
+  <text x="424" y="128" font-family="ui-sans-serif, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="-1" fill="url(#word)">AUREON</text>
+
+  <!-- tagline -->
+  <text x="428" y="166" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13.5" letter-spacing="2.2" fill="#7C8BA5">ADAPTIVE UNIFIED RETRIEVAL ENGINE</text>
+
+  <!-- accent underline -->
+  <rect x="428" y="182" width="120" height="4" rx="2" fill="url(#fuse)"/>
+  <rect x="556" y="182" width="36" height="4" rx="2" fill="#22304A"/>
+</svg>
