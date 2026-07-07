@@ -37,6 +37,11 @@ each candidate — designed in from day one so downstream demos and audits never
 have to guess.
 
 ---
+## Demo Video
+
+![Aureon demo](assets/aureon-2.gif)
+
+---
 
 ## 📦 Installation
 
